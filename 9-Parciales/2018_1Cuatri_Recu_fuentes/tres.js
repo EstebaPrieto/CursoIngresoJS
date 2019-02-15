@@ -1,13 +1,15 @@
 function mostrar()
 {
-    var precio;
-    var descuento;
-    var porcentaje;
-    var preciofinal;
-    precio=prompt("Ingrese el precio: ");
-    porcentaje=prompt("ingrese el porcentaje de descuento: ");
-    descuento=parseInt(porcentaje)* parseInt(precio)/100;
-    preciofinal=parseInt(precio)-parseInt(descuento);
-    document.getElementById("elPrecioFinal").value=preciofinal;
+var cant_persona;
+var precio_total;
+var precio_cadauno;
+var precio_prop;
+var preciofinal;    
 
+cant_persona=prompt("ingrese la cantidad de omensales: ");
+precio_total=document.getElementById("elPrecioFinal").value;
+precio_prop=parseInt(precio_total)*1.10;
+preciofinal=precio_prop*1.21;
+precio_cadauno=preciofinal/parseInt(cant_persona);
+alert("el total es " +precio_total+" mas la propina: "+ precio_prop+" mas el IVA: "+ preciofinal+ " cada uno debe pagar: "+ precio_cadauno );
 }
