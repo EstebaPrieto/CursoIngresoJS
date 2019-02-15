@@ -1,13 +1,17 @@
 
+
 function mostrar()
 {
-var ancho;
-var largo;
-var suma;
-var perimetro;
-ancho=prompt("ingrese el ancho de un rectangulo");
-largo=prompt("ingrese el largo de un rectangulo");
-suma= parseInt(ancho)+parseInt(largo);
-perimetro=suma*2;
-alert("el perimetro es "+perimetro);
+    var mascota1;
+    var mascota2;
+    var peso1;
+    var peso2;
+    var suma;
+mascota1=prompt("ingrese el nombre de su mascota: ");
+peso1=prompt("ingrese el peso:");
+mascota2=prompt("ingrese el nombre de otra mascota:");
+peso2=prompt("ingrese su peso");
+suma= parseInt(peso1)+parseInt(peso2);
+alert("tenés dos mascotas "+ mascota1+" y "+mascota2 + " que pesan "+peso1 + " y " +peso 2+ " la suma de los kilos es " + suma);
+
 }
