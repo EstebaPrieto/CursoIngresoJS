@@ -17,16 +17,17 @@ cond_pago=prompt("usted paga con tarjeta o efectivo: ");
 suma=parseInt(precio1)+parseInt(precio2)+parseInt(precio3);
 if (cant_libro>=2) {
 
-    precio10=90*suma/100;
+    precio10=suma*0.9;
 if (cond_pago=="tarjeta") {
     preciotarj=suma
 }
    
 }
 if (suma>=2000) {
-    precio15=85*suma/100;
+    precio15=suma*0.85;
     if (cond_pago=="tarjeta") {
-      preciotarj=precio15*1.10  
+      preciotarj=precio15*1.10;
+      
     }
 }
 
