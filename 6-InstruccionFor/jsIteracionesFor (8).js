@@ -6,8 +6,8 @@ numero=prompt("ingrese un numero");
 numero=parseInt(numero);
 if (numero==2) {
     alert("es primo");
-
-for(var contador=2; contador<numero/2;contador+1 ){
+}
+for(var contador=2; contador<numero;contador+1 ){
     if (numero%contador==0 ) {
         acumulador=acumulador+1;
         if (acumulador>2) {
@@ -23,5 +23,5 @@ for(var contador=2; contador<numero/2;contador+1 ){
 }
 
 }
-}
+
 }//FIN DE LA FUNCIÓN
