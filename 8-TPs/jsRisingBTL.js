@@ -7,7 +7,24 @@ D.	Sueldo bruto, no menor a 8000.
 E.	Número de legajo, numérico de 4 cifras, sin ceros a la izquierda.
 F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para nacionalizados.
  */
+
+var edad;
+var sexo;
+var estadoCivil;
+var sueldo;
+var legajo;
+var nacionalidad;
+
 function ComenzarIngreso () 
 {
- 
+edad=prompt("ingrese edad: ")
+while (edad<18&&edad>90) {
+    
+}
+
+sexo = prompt("ingrese f ó m .");
+while (sexo!= "f" && sexo !="m") {
+    var sexo = prompt("ingrese f ó m .");
+}
+
 }

@@ -16,7 +16,7 @@ function mostrar()
 
 	while(respuesta!="no")
 	{
-		var numero=prompt("ingrese un numero");
+		var numero=parseInt(prompt("ingrese un numero"));
 		contador++;
 		if (numero%2==0 && numero!=0) {
 		contadorPares++;	
@@ -34,14 +34,13 @@ function mostrar()
 		}
 		respuesta=prompt("ingrese no pasa salir");	
 	}
-	
+	//alert(acumuladorPositivo)
 	promedioNeg=acumuladorNegativos/contadorNegativos;
 	promedioPos=acumuladorPositivo/contadorPositivos;
-	diferencia=acumuladorPositivo-acumuladorNegativos;
+	diferencia=acumuladorPositivo+acumuladorNegativos;
 document.write("suma de negativos:"+acumuladorNegativos +"<br/>suma de positivos: " +acumuladorPositivo+
 "<br/> Cantidad de positivos:" +contadorPositivos+"<br/>Cantidad de negativos: "+contadorNegativos+
-"<br/> Cantidad de ceros: "+contadorCero+"<br/> Cantidad de pares: "+contadorCero+
-"<br/> Cantidad de pares: "+contadorPares+"<br/> Promedio positivos: "+promedioPos+
+"<br/> Cantidad de ceros: "+contadorCero+"<br/> Cantidad de pares: "+contadorPares+"<br/> Promedio positivos: "+promedioPos+
 "<br/> Promedio negativos: "+promedioNeg+"<br/> diferencia: "+diferencia );
 
 
