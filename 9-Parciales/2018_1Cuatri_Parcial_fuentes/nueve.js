@@ -1,8 +1,8 @@
 function mostrar()
 {
 var marca;
-var p; 
-var peso;
+var p=0; 
+var peso=0;
 var t;
 var temp;
 var respuesta="si";
@@ -23,8 +23,8 @@ while (respuesta!="no") {
     p=prompt("ingrese PESO");
     peso=parseInt(p);
     while (peso<1||peso>100) {
-        peso=prompt("PESO ENTRE 1 Y 100")
-       
+        peso=prompt("PESO ENTRE 1 Y 100");
+               
     }
     t=prompt("ingrese TEMPERATURA");
     temp=parseInt(t);
@@ -58,20 +58,23 @@ while (respuesta!="no") {
     if (peso<pesoMin&&contador!=0) {
         pesoMin=peso;
     }
+    
+    //D
+    if (peso>0&&peso<101) {
+       acumuladorPeso=acumuladorPeso+peso;
+    }
+   
     //contador
     contador++;
-    //D
-    acumuladorPeso=parseInt(acumuladorPeso)+peso;
-    
     //respuesta
     respuesta=prompt("NO para terminar");
 
      
 }
 
-
+alert(acumuladorPeso)
     
-//fin val peso
+
 promPeso=acumuladorPeso/contador;
 document.write("Temperaturas pares: "+contadorTempPar+"<br/>Marca de Prod. MAS PESADO: "+marcaMasPes+
 "<br/>Productos con MENOS DE 0°: "+contadorTempMenos0+
