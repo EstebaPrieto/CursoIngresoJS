@@ -4,18 +4,19 @@ var letra;
 var num;
 
 var respuesta="si";
-
+var contador=0;
 var contadorPares=0;
 var contadorImpares=0;
+var contadorPositivos=0;
 var contadorCero=0;
 var acumuladorPositivos=0;
 var acumuladorNegativos=0;
-var promedio=0;
-var numeroMax=0;
-var numeroMinimo=0;
+var promedio;
+var numeroMax;
+var numeroMinimo;
 var letraMax;
 var letraMin;
-var contadorPositivos=0;
+
 //parsear
 //var numeroMax=parseInt(numMax);
 //var numeroMinimo=parseInt(numMin);
@@ -48,16 +49,22 @@ while (respuesta!="no") {
     if (numero<0) {
         acumuladorNegativos=acumuladorNegativos+numero;        
     }
-    
-    if (numero<numeroMinimo) {
+    if (contador==0) {
+        numeroMax=numero;
+        letraMax=letra;
         numeroMinimo=numero;
         letraMin=letra;
     }
-    if (numero>numeroMax) {
+    if (numero<numeroMinimo&&contador!=0) {
+        numeroMinimo=numero;
+        letraMin=letra;
+    }
+    if (numero>numeroMax&&contador!=0) {
         numeroMax=numero;
         letraMax=letra;
     }
     respuesta=prompt("ingrese NO para salir");
+    contador++;
 }
 promedio=acumuladorPositivos/contadorPositivos;
 document.write("cant pares: "+contadorPares+"<br/>Cant impares: "+contadorImpares+
