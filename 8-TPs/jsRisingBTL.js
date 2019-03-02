@@ -17,14 +17,27 @@ var nacionalidad;
 
 function ComenzarIngreso () 
 {
-edad=prompt("ingrese edad: ")
-while (edad<18&&edad>90) {
-    
+edad = prompt("ingrese edad: ")
+edad = parseInt(edad);
+while (edad < 18 && edad > 90) {
+    edad = prompt("edad entre 18 y 90");
+    edad = parseInt(edad);
 }
 
 sexo = prompt("ingrese f ó m .");
 while (sexo!= "f" && sexo !="m") {
     var sexo = prompt("ingrese f ó m .");
 }
-
+estadoCivil = prompt("Estado Civil: 1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos ");
+estadoCivil = parseInt(estadoCivil);
+while (estadoCivil < 1 || estadoCivil > 5 ) {
+    estadoCivil = prompt("Estado Civil: 1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos ");
+    estadoCivil = parseInt(estadoCivil);
 }
+sueldo = prompt("ingrese sueldo");
+sueldo = parseInt(sueldo);
+while (sueldo < 8000) {
+    
+}
+
+}//fin funcion

@@ -1,20 +1,20 @@
 function mostrar()
 {
 var marca;
-var p=0; 
-var peso=0;
+var p; 
+var peso;
 var t;
 var temp;
 var respuesta="si";
 var contadorTempPar=0;
 var masPesado;
 var contadorTempMenos0=0;
-var promPeso=0;
+var promPeso;
 var pesoMax;
 var pesoMin;
 var contador=0;
 var marcaMasPes;
-var acumuladorPeso=0;
+var acumuladorPeso;
 
 
 while (respuesta!="no") {
@@ -24,13 +24,15 @@ while (respuesta!="no") {
     peso=parseInt(p);
     while (peso<1||peso>100) {
         peso=prompt("PESO ENTRE 1 Y 100");
+        peso=parseInt(peso);
                
     }
     t=prompt("ingrese TEMPERATURA");
     temp=parseInt(t);
     while (temp<-30||temp>30) {
         temp=prompt("TEMPERATURA ENTRE -30 Y 30");
-}//fin val temp
+        temp=parseInt(temp);
+    }//fin val temp
     
     //logica
     //A
@@ -60,8 +62,8 @@ while (respuesta!="no") {
     }
     
     //D
-    if (peso>0&&peso<101) {
-       acumuladorPeso=acumuladorPeso+peso;
+    if (peso > 0 && peso < 101) {
+       acumuladorPeso = acumuladorPeso + peso;
     }
    
     //contador
@@ -72,7 +74,7 @@ while (respuesta!="no") {
      
 }
 
-alert(acumuladorPeso)
+//alert(acumuladorPeso)
     
 
 promPeso=acumuladorPeso/contador;
